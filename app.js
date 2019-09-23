@@ -9,7 +9,7 @@ var port = 3000;
 var app = express();
 
 // STEP 1: Setting up the boilerplate and routing
-app.get('/', function(req, res) {
+app.get('/wikipedia', function(req, res) {
 
 // Storing url
 
@@ -40,6 +40,44 @@ app.get('/', function(req, res) {
         });
 
         res.send(data);
+
+        fs.writeFile('wiki-output.js', JSON.stringify(data, null, 4), function(error){
+          console.log('File written on hard drive!');
+        });
+
+    }
+    //All the web scraping magic will happen here
+    // res.send('Hello World')
+  });
+});
+
+app.get('/imdb', function(req, res) {
+
+// Storing url
+
+  var url = 'https://www.imdb.com/chart/top';
+
+// Making HTTP request
+  request(url, function(error, response, html) {
+
+    if(!error) {
+
+        // res.send(html);
+        // scrape specific data
+        var $ = cheerio.load(html);
+        var data = [];
+
+        $('.lister-list').filter(function(){
+          $(this).find('tr').each(function(i, elem){
+            data[i] = "'" + $(this).find('.posterColumn').find('img').attr('src') + "'";
+          });
+        });
+
+        res.send(data);
+
+        fs.writeFile('imdb-output.js', 'var imdb list = ['+ data +']', function(error){
+          console.log('File written on hard drive!');
+        });
 
     }
     //All the web scraping magic will happen here
