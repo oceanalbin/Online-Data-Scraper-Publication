@@ -69,13 +69,13 @@ app.get('/imdb', function(req, res) {
 
         $('.lister-list').filter(function(){
           $(this).find('tr').each(function(i, elem){
-            data[i] = " '" + $(this).find('.posterColumn').find('img').attr('src') + "'";
+            data[i] = "'" + $(this).find('.posterColumn').find('img').attr('src') + "'";
           });
         });
 
         res.send(data);
 
-        fs.writeFile('imdb-output.js', 'var imdb_list = ['+ data +']', function(error){
+        fs.writeFile('imdb-output.js', 'var imdb_list = [' + data + ']', function(error){
           console.log('File written on hard drive!');
         });
 
