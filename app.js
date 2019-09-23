@@ -13,12 +13,12 @@ app.get('/', function(req, res)
 
 // Storing url
 
-  var url = 'https://nl.wikipedia.org/wiki/Fyllotaxis'
+  var url = 'https://nl.wikipedia.org/wiki/Fyllotaxis';
 
 // Making HTTP request
-  request(url, options: function(error, response, html))
+  request(url, function(error, response, html))
     if(!error) {
-        res.send(html)
+        res.send(html);
     }
     //All the web scraping magic will happen here
     // res.send('Hello World')
