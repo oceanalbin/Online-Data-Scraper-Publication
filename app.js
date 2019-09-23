@@ -69,7 +69,7 @@ app.get('/imdb', function(req, res) {
 
         $('.lister-list').filter(function(){
           $(this).find('tr').each(function(i, elem){
-            data[i] = "'" + $(this).find('.posterColumn').find('img').attr('src') + "'";
+            data[i] = " '" + $(this).find('.posterColumn').find('img').attr('src') + "'";
           });
         });
 
