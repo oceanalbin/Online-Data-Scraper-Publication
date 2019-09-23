@@ -1,0 +1,14 @@
+{
+    "name": "Webscraper",
+    "version": "0.0.1",
+    "homepage": "",
+    "description": "Scraping_the_web",
+    "author": "",
+    "main": "app.js",
+    "dependencies": {
+        "nodemon": "latest",
+        "express": "latest",
+        "request": "latest",
+        "cheerio": "latest"
+    }
+}
