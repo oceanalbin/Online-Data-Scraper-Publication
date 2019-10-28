@@ -41,7 +41,7 @@ app.get('/wikipedia', function(req, res) {
 
         res.send(data);
 
-        fs.writeFile('wiki-output.js', JSON.stringify(data, null, 4), function(error){
+        fs.writeFile('wiki-output.js', 'var wiki_output = ' + JSON.stringify(data, null, 4), function(error){
           console.log('File written on hard drive!');
         });
 
@@ -50,6 +50,55 @@ app.get('/wikipedia', function(req, res) {
     // res.send('Hello World')
   });
 });
+
+
+// 2ND WIKIPEDIA
+
+// STEP 1: Setting up the boilerplate and routing
+app.get('/wikipedia2', function(req, res) {
+
+// Storing url
+
+  var url = 'https://en.wikipedia.org/wiki/Lists_of_earthquakes';
+
+// Making HTTP request
+  request(url, function(error, response, html) {
+
+    if(!error) {
+
+        // res.send(html);
+        // scrape specific data
+        var $ = cheerio.load(html);
+        var data = {
+          articleTitle : '',
+          articleImg : '',
+          articleParagraph: '',
+          newStuff: ''
+        };
+
+        $('#content').filter(function(){
+
+          data.articleTitle = $(this).find('#firstHeading').text();
+          data.articleImg = $(this).find('img').first().attr('src');
+          data.articleParagraph = $(this).find('p').first().text();
+          data.newStuff = $(this).find('h2').first().text();
+
+        });
+
+        res.send(data);
+
+        fs.writeFile('wiki-output-list.js', 'var wiki_output-list = ' + JSON.stringify(data, null, 4), function(error){
+          console.log('File written on hard drive!');
+        });
+
+    }
+    //All the web scraping magic will happen here
+    // res.send('Hello World')
+  });
+});
+
+
+
 
 app.get('/imdb', function(req, res) {
 

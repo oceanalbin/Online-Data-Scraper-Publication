@@ -29,14 +29,22 @@
 
 <!-- WIKI -->
 <head>
-  <script type="text/javascript" src="data/wiki_output.js"></script>
+  <script type="text/javascript" src="wiki-output.js"></script>
   <script type="text/javascript" >
     function load() {
       const div = document.getElementById('data');
-      const title = "<h1 class='title'>"+ wiki_output.title +"</h1>";
-      const img = "<img src='"+ wiki_output.img +"'>"
-      const parag = "<p>"+ wiki_output.paragraph +"</p>"
-      div.innerHTML = title + img + parag;
+
+      const divContainer = document.createElement("DIV");
+      divContainer.setAttribute("class", "container");
+
+      const title = "<h1 class='title'>"+ wiki_output.articleTitle +"</h1>";
+      const img = "<img src='http:"+ wiki_output.articleImg +"'>"
+      const parag = "<p>"+ wiki_output.articleParagraph +"</p>"
+      const parag2 = "<p>"+ wiki_output.newStuff +"</p>"
+
+      divContainer.innerHTML = title + img + parag + parag2;
+
+      div.append(divContainer);
     }
   </script>
 </head>
