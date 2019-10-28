@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
+
+<!-- IMDB -->
+<!-- <head>
     <script type="text/javascript" src="imdb-output.js"></script>
     <script type="text/javascript" >
         function loadIMDB() {
@@ -23,5 +25,22 @@
 </head>
 <body onload="loadIMDB()">
 <div id="data"></div>
+</body> -->
+
+<!-- WIKI -->
+<head>
+  <script type="text/javascript" src="data/wiki_output.js"></script>
+  <script type="text/javascript" >
+    function load() {
+      const div = document.getElementById('data');
+      const title = "<h1 class='title'>"+ wiki_output.title +"</h1>";
+      const img = "<img src='"+ wiki_output.img +"'>"
+      const parag = "<p>"+ wiki_output.paragraph +"</p>"
+      div.innerHTML = title + img + parag;
+    }
+  </script>
+</head>
+<body onload="load()">
+  <div id="data"></div>
 </body>
 </html>
