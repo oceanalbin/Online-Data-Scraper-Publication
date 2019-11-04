@@ -87,7 +87,7 @@ app.get('/wikipedia2', function(req, res) {
 
         res.send(data);
 
-        fs.writeFile('wiki-output-list.js', 'var wiki_output-list = ' + JSON.stringify(data, null, 4), function(error){
+        fs.writeFile('wiki-output-list.js', 'var wiki_output_list = ' + JSON.stringify(data, null, 4), function(error){
           console.log('File written on hard drive!');
         });
 
@@ -132,7 +132,7 @@ app.get('/wikipedia3', function(req, res) {
 
         res.send(data);
 
-        fs.writeFile('wiki-output-sense.js', 'var wiki_output-sense = ' + JSON.stringify(data, null, 4), function(error){
+        fs.writeFile('wiki-output-sense.js', 'var wiki_output_sense = ' + JSON.stringify(data, null, 4), function(error){
           console.log('File written on hard drive!');
         });
 
@@ -177,7 +177,7 @@ app.get('/wikipedia4', function(req, res) {
 
         res.send(data);
 
-        fs.writeFile('wiki-output-economy.js', 'var wiki_output-economy = ' + JSON.stringify(data, null, 4), function(error){
+        fs.writeFile('wiki-output-economy.js', 'var wiki_output_economy = ' + JSON.stringify(data, null, 4), function(error){
           console.log('File written on hard drive!');
         });
 
@@ -222,7 +222,7 @@ app.get('/wikipedia5', function(req, res) {
 
         res.send(data);
 
-        fs.writeFile('wiki-output-earth.js', 'var wiki_output-earth = ' + JSON.stringify(data, null, 4), function(error){
+        fs.writeFile('wiki-output-earth.js', 'var wiki_output_earth = ' + JSON.stringify(data, null, 4), function(error){
           console.log('File written on hard drive!');
         });
 
@@ -232,7 +232,7 @@ app.get('/wikipedia5', function(req, res) {
   });
 });
 
-app.get('/guardian', function(req, res) {
+app.get('/nytimes', function(req, res) {
  var url = "https://www.nytimes.com/search?query=police";
  // let's make the http request to the url above using the 'request' dependency
  request(url, function(error, response, html) {
@@ -262,7 +262,7 @@ app.get('/guardian', function(req, res) {
          });
      // send the data we've stored in our object back to the browser
      res.send(item_output);
-     fs.writeFile('guardian_output.js', "var guardian_output = " + JSON.stringify(guardian_data), function(error){
+     fs.writeFile('nytimes_output.js', "var nytimes_output = " + JSON.stringify(guardian_data), function(error){
        console.log("File is written successfully!");
      });
    }

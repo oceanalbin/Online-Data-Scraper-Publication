@@ -1,1 +1,0 @@
-var guardian_output = {"title":"","img":"","paragraph":""}

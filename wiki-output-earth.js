@@ -1,4 +1,4 @@
-var wiki_output-earth = {
+var wiki_output_earth = {
     "articleTitle": "Earth",
     "articleImg": "//upload.wikimedia.org/wikipedia/en/thumb/e/e7/Cscr-featured.svg/20px-Cscr-featured.svg.png",
     "articleParagraph": "\n\n",
