@@ -97,8 +97,140 @@ app.get('/wikipedia2', function(req, res) {
   });
 });
 
+// 3RD WIKIPEDIA
 
+// STEP 1: Setting up the boilerplate and routing
+app.get('/wikipedia3', function(req, res) {
 
+// Storing url
+
+  var url = 'https://en.wikipedia.org/wiki/Sense';
+
+// Making HTTP request
+  request(url, function(error, response, html) {
+
+    if(!error) {
+
+        // res.send(html);
+        // scrape specific data
+        var $ = cheerio.load(html);
+        var data = {
+          articleTitle : '',
+          articleImg : '',
+          articleParagraph: '',
+          newStuff: ''
+        };
+
+        $('#content').filter(function(){
+
+          data.articleTitle = $(this).find('#firstHeading').text();
+          data.articleImg = $(this).find('img').first().attr('src');
+          data.articleParagraph = $(this).find('p').first().text();
+          data.newStuff = $(this).find('h2').first().text();
+
+        });
+
+        res.send(data);
+
+        fs.writeFile('wiki-output-sense.js', 'var wiki_output-sense = ' + JSON.stringify(data, null, 4), function(error){
+          console.log('File written on hard drive!');
+        });
+
+    }
+    //All the web scraping magic will happen here
+    // res.send('Hello World')
+  });
+});
+
+// 4TH WIKIPEDIA
+
+// STEP 1: Setting up the boilerplate and routing
+app.get('/wikipedia4', function(req, res) {
+
+// Storing url
+
+  var url = 'https://en.wikipedia.org/wiki/Economy';
+
+// Making HTTP request
+  request(url, function(error, response, html) {
+
+    if(!error) {
+
+        // res.send(html);
+        // scrape specific data
+        var $ = cheerio.load(html);
+        var data = {
+          articleTitle : '',
+          articleImg : '',
+          articleParagraph: '',
+          newStuff: ''
+        };
+
+        $('#content').filter(function(){
+
+          data.articleTitle = $(this).find('#firstHeading').text();
+          data.articleImg = $(this).find('img').first().attr('src');
+          data.articleParagraph = $(this).find('p').first().text();
+          data.newStuff = $(this).find('h2').first().text();
+
+        });
+
+        res.send(data);
+
+        fs.writeFile('wiki-output-economy.js', 'var wiki_output-economy = ' + JSON.stringify(data, null, 4), function(error){
+          console.log('File written on hard drive!');
+        });
+
+    }
+    //All the web scraping magic will happen here
+    // res.send('Hello World')
+  });
+});
+
+// 5TH WIKIPEDIA
+
+// STEP 1: Setting up the boilerplate and routing
+app.get('/wikipedia5', function(req, res) {
+
+// Storing url
+
+  var url = 'https://en.wikipedia.org/wiki/Earth';
+
+// Making HTTP request
+  request(url, function(error, response, html) {
+
+    if(!error) {
+
+        // res.send(html);
+        // scrape specific data
+        var $ = cheerio.load(html);
+        var data = {
+          articleTitle : '',
+          articleImg : '',
+          articleParagraph: '',
+          newStuff: ''
+        };
+
+        $('#content').filter(function(){
+
+          data.articleTitle = $(this).find('#firstHeading').text();
+          data.articleImg = $(this).find('img').first().attr('src');
+          data.articleParagraph = $(this).find('p').first().text();
+          data.newStuff = $(this).find('h2').first().text();
+
+        });
+
+        res.send(data);
+
+        fs.writeFile('wiki-output-earth.js', 'var wiki_output-earth = ' + JSON.stringify(data, null, 4), function(error){
+          console.log('File written on hard drive!');
+        });
+
+    }
+    //All the web scraping magic will happen here
+    // res.send('Hello World')
+  });
+});
 
 app.get('/imdb', function(req, res) {
 
