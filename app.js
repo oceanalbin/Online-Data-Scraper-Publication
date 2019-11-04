@@ -73,7 +73,9 @@ app.get('/wikipedia2', function(req, res) {
           articleTitle : '',
           articleImg : '',
           articleParagraph: '',
-          newStuff: ''
+          newStuff: '',
+          tableHeaders: '',
+          tableHeaders2: ''
         };
 
         $('#content').filter(function(){
@@ -82,6 +84,18 @@ app.get('/wikipedia2', function(req, res) {
           data.articleImg = $(this).find('img').first().attr('src');
           data.articleParagraph = $(this).find('p').first().text();
           data.newStuff = $(this).find('h2').first().text();
+
+          $(this).find('table').find('th').each(function(){
+            data.tableHeaders = $(this).text();
+          });
+
+          const tableHeaders2 = [];
+
+          $('th').each(function(i, elem) {
+            tableHeaders2[i] = $(this).text();
+          });
+
+          tableHeaders2.join(', ');
 
         });
 
