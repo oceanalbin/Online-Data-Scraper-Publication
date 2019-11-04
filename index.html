@@ -37,10 +37,10 @@
       const divContainer = document.createElement("DIV");
       divContainer.setAttribute("class", "container");
 
-      const title = "<h1 class='title'>"+ wiki_output.articleTitle +"</h1>";
-      const img = "<img src='http:"+ wiki_output.articleImg +"'>"
-      const parag = "<p>"+ wiki_output.articleParagraph +"</p>"
-      const parag2 = "<p>"+ wiki_output.newStuff +"</p>"
+      const title = "<h1 class='title'>"+ wiki_output_list.articleTitle +"</h1>";
+      const img = "<img src='http:"+ wiki_output_list.articleImg +"'>"
+      const parag = "<p>"+ wiki_output_list.articleParagraph +"</p>"
+      const parag2 = "<p>"+ wiki_output_list.newStuff +"</p>"
 
       divContainer.innerHTML = title + img + parag + parag2;
 
