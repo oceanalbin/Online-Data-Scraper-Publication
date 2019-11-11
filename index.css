@@ -1,0 +1,758 @@
+@font-face {
+  font-family: 'Basker';
+  src: url('fonts/bask.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Errata';
+  src: url('fonts/err.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'GT';
+  src: url('fonts/gtamr.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'GThin';
+  src: url('fonts/gtamt.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'GThinitalic';
+  src: url('fonts/gtamti.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+}
+
+body, html {
+  text-decoration: none;
+}
+
+p {
+  font-family: "Basker";
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Basker";
+  font-size: 10vw;
+  color: rgb(59, 255, 0);
+  text-decoration: none;
+}
+
+table {
+  width: 600px;
+  /* border-spacing: 40px; */
+}
+
+th {
+  text-align: left;
+}
+
+table, th, td {
+  border: 1px solid red;
+  border-collapse: collapse;
+}
+
+th, td {
+padding: 10px;
+}
+
+tr:nth-child(even) {
+  /* background-color: white; */
+}
+
+tr:nth-child(odd) {
+  background-color: grey;
+}
+
+.tablediv {
+  margin-top: 1150px;
+    position: absolute;
+}
+
+.redblock {
+  margin-top: 45%;
+  position: absolute;
+  width: 33%;
+  height: 500px;
+  background-color: red;
+
+  font-family: "Errata";
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+.redblock:hover {
+  margin-top: 25%;
+  height: 788px;
+}
+
+.redblock img{
+  width:100%;
+}
+
+.greenblock {
+  margin-top: 45%;
+  position: absolute;
+  margin-left: 33%;
+  width: 33%;
+  height: 500px;
+  background-color: rgb(59, 255, 0);
+
+  font-family: "Errata";
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+.greenblock:hover {
+  margin-top: 25%;
+  height: 788px;
+}
+
+.greenblock img{
+  width:100%;
+}
+
+.blueblock {
+  margin-top: 45%;
+  position: absolute;
+  margin-left: 66vw;
+  width: 33%;
+  height: 500px;
+  background-color: blue;
+
+  font-family: "Errata";
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+.blueblock:hover {
+  margin-top: 25%;
+  height: 788px;
+}
+
+.blueblock img{
+  width:100%;
+}
+
+#header {
+  font-family: "Errata";
+  background-color: black;
+  padding: 50px 10px; /* Some padding */
+  /* color: black; */
+  color: white;
+  /* text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px darkblue; */
+  text-align: center; /* Centered text */
+  font-size: 140px; /* Big font size */
+  position: fixed; /* Fixed position - sit on top of the page */
+  top: 0;
+  width: 100%; /* Full width */
+  transition: 0.8s; /* Add a transition effect (when scrolling - and font size is decreased) */
+  z-index:555556;
+}
+
+#header3 {
+  font-family: "Errata";
+  padding: 200px 10px; /* Some padding */
+  /* color: black; */
+  color: white;
+  /* text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px darkblue; */
+  text-align: center; /* Centered text */
+  font-size: 60px; /* Big font size */
+  position: fixed; /* Fixed position - sit on top of the page */
+  top: 0;
+  width: 100%; /* Full width */
+  transition: 0.8s; /* Add a transition effect (when scrolling - and font size is decreased) */
+margin-right: 0px;
+z-index:555557;
+}
+
+.containerheader4 {
+  margin-top: 1000px;
+  z-index: 100;
+}
+
+#header4 {
+  font-family: "Errata";
+  background-color: red;
+  padding: 10px 10px; /* Some padding */
+  /* color: black; */
+  color: white;
+  margin-top: 800px;
+  position: absolute;
+  text-align: center; /* Centered text */
+  font-size: 140px; /* Big font size */
+  left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+}
+
+#header5 {
+  font-family: "Errata";
+  background-color: rgb(127,255,0);
+  padding: 10px 10px; /* Some padding */
+  /* color: black; */
+  color: white;
+  margin-top: 2800px;
+  position: absolute;
+  text-align: center; /* Centered text */
+  font-size: 140px; /* Big font size */
+  left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+}
+
+#header6 {
+  font-family: "Errata";
+  background-color: blue;
+  padding: 10px 10px; /* Some padding */
+  /* color: black; */
+  color: white;
+  margin-top: 9800px;
+  position: absolute;
+  text-align: center; /* Centered text */
+  font-size: 140px; /* Big font size */
+  left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+}
+
+.header2 {
+position:fixed;
+font-family: "Errata";
+font-size: 140px;
+line-height: 60px;
+color: white;
+text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px darkblue;
+text-align: center;
+margin-left: 75px;
+margin-top: 50px
+}
+
+
+.subheaders {
+  position: absolute;
+  font-family: "Errata";
+  font-size: 30px;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px darkblue;
+  margin-left: 500px;
+  margin-top: 100px;
+}
+
+.text01 {
+  margin-top: 300px;
+  position: absolute;
+  font-family: "GThinitalic";
+  font-size: 35px;
+  padding: 0px 100px;
+  letter-spacing: -2px;
+  /* outline-style: solid;
+  outline-color: orange; */
+  /* overflow: hidden;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite; */
+}
+
+.reddivide {
+  margin-top: 980px;
+  position: absolute;
+  background-color: red;
+  width: 50px;
+  height: 10000px;
+  left:50%
+}
+
+.greendivide {
+  margin-top: 2980px;
+  position: absolute;
+  background-color: rgb(127,255,0);
+  width: 50px;
+  height: 10000px;
+  left:50%
+}
+
+.bluedivide {
+  margin-top: 9980px;
+  position: absolute;
+  background-color: blue;
+  width: 50px;
+  height: 10000px;
+  left:50%
+}
+
+.text1 {
+margin-top: 300px;
+/* outline-style: solid;
+outline-color: orange; */
+position: absolute;
+font-family: "GThin";
+font-size: 23px;
+/* line-height: 18px; */
+width: 800px;
+margin-left: 300px;
+letter-spacing: -1px;
+overflow: hidden; /* Ensures the content is not revealed until the animation */
+/* border-right: .15em solid orange; /* The typwriter cursor */
+animation:
+  typing 3.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+}
+
+.humansense {
+  margin-top: 80%;
+  margin-left: 800px;
+  position: absolute;
+  /* color: red; */
+  font-family: "Errata";
+  font-size: 80px;
+}
+
+.text2 {
+  margin-top: 1000px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  position:absolute;
+  font-family: "GThin";
+  font-size: 16px;
+  /* line-height: 18px; */
+  width: 700px;
+  margin-left: 200px;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+}
+
+
+.firstimage {
+  margin-top: 1100px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  margin-left:800px;
+  position:absolute;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+}
+
+.image2 {
+  margin-top: 1400px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  margin-left:200px;
+  position:absolute;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+}
+
+.image3 {
+  margin-top: 1700px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  margin-left:1100px;
+  position:absolute;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+  width: 100px;
+}
+
+.image3 img{
+  max-width: 100%;
+  height: auto;
+}
+
+.image4 {
+  margin-top: 2000px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  margin-left:200px;
+  width: 300px;
+  position:absolute;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+}
+
+.image4 img{
+  max-width: 100%;
+  height: auto;
+}
+
+.image5 {
+  margin-top: 2300px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  margin-left:50px;
+  position:absolute;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+  width: 500px;
+}
+
+.image5 img{
+  max-width: 100%;
+  height: auto;
+}
+
+.image6 {
+  margin-top: 2000px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  margin-left:50px;
+  position:absolute;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+  width: 100px;
+}
+
+.image6 img{
+  max-width: 100%;
+  height: auto;
+}
+
+.image7 {
+  margin-top: 2300px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  margin-left:1200px;
+  position:absolute;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+  width: 200px;
+}
+
+.image7 img{
+  max-width: 100%;
+  height: auto;
+}
+
+.image8 {
+  margin-top: 1650px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  margin-left:50px;
+  position:absolute;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+  width: 300px;
+}
+
+.image8 img{
+  max-width: 100%;
+  height: auto;
+}
+
+.image9 {
+  margin-top: 1500px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  margin-left:1050px;
+  position:absolute;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+  width: 300px;
+}
+
+.image9 img{
+  max-width: 100%;
+  height: auto;
+}
+
+.image10 {
+  margin-top: 2300px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  margin-left:50px;
+  position:absolute;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+  width: 500px;
+}
+
+.image10 img{
+  max-width: 100%;
+  height: auto;
+}
+
+.text2_1 {
+  margin-top: 1300px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  position:absolute;
+  font-family: "GThin";
+  font-size: 16px;
+  /* line-height: 18px; */
+  width: 700px;
+  margin-left: 50px;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+}
+
+.text2_2 {
+  margin-top: 1600px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  position:absolute;
+  font-family: "GThin";
+  font-size: 16px;
+  /* line-height: 18px; */
+  width: 700px;
+  margin-left: 450px;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+}
+
+.text2_3 {
+  margin-top: 1900px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  position:absolute;
+  font-family: "GThin";
+  font-size: 16px;
+  /* line-height: 18px; */
+  width: 700px;
+  margin-left: 700px;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+}
+
+.text2_4 {
+  margin-top: 2200px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  position:absolute;
+  font-family: "GThin";
+  font-size: 16px;
+  /* line-height: 18px; */
+  width: 700px;
+  margin-left: 600px;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+}
+
+.text2_5 {
+  margin-top: 2500px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: red;
+  position:absolute;
+  font-family: "GThin";
+  font-size: 16px;
+  /* line-height: 18px; */
+  width: 700px;
+  margin-left: 650px;
+  letter-spacing: -1px;
+  /* padding:10px; */
+  background-color: white;
+}
+
+.text3 {
+  margin-top: 3100px;
+  padding: 5px;
+  outline-style: solid;
+  outline-color: rgb(127,255,0);
+  position:absolute;
+  font-family: "GThin";
+  font-size: 16px;
+  /* line-height: 18px; */
+  width: 1000px;
+  margin-left: 200px;
+  letter-spacing: -1px;
+background-color: white;
+}
+
+.text3 img{
+margin-left: 200px;
+    max-width: 60%;
+    height: auto;
+}
+
+.text4 {
+  margin-top: 10000px;
+  outline-style: solid;
+  outline-color: blue;
+  position:absolute;
+  font-family: "GThin";
+  font-size: 16px;
+  /* line-height: 18px; */
+  width: 1000px;
+  margin-left: 500px;
+  letter-spacing: -1px;
+  background-color: white;
+}
+
+
+
+
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 500px }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+
+
+
+
+
+.box {
+  margin-left: 15vw;
+  /* position: absolute; */
+  width: 66vw;
+  /* height: 60vh; */
+   /* border: 1px solid red; */
+   display: inline-block;
+   text-decoration: none;
+}
+
+.box2 {
+   text-decoration: none;
+}
+
+.box3 {
+
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border-radius: 50%;
+position: relative;
+-webkit-transition: all 300ms ease-in-out;
+-o-transition: all 300ms ease-in-out;
+transition: all 300ms ease-in-out;
+display: inline-block;
+text-decoration: none;
+}
+
+.circle:hover {
+  width: 600px;
+  height: 600px;
+  -webkit-transition: all 300ms ease-in-out;
+-o-transition: all 300ms ease-in-out;
+transition: all 300ms ease-in-out;
+text-decoration: none;
+}
+
+.text {
+  margin-top: 50%;
+  font-family: "Basker";
+  font-size: 1vw;
+  text-align: center;
+  /* position: absolute; */
+  text-decoration: none;
+}
+
+.circle:hover .text{
+font-size: 4vw;
+-webkit-transition: all 300ms ease-in-out;
+-o-transition: all 300ms ease-in-out;
+transition: all 300ms ease-in-out;
+}
+
+.text2:hover
+  {
+    z-index:555555 !important;
+  }
+  .firstimage:hover
+    {
+      z-index:555555 !important;
+    }
+    .text2_1:hover
+      {
+        z-index:555555 !important;
+      }
+      .text2_2:hover
+        {
+          z-index:555555 !important;
+        }
+        .text2_3:hover
+          {
+            z-index:555555 !important;
+          }
+          .text2_4:hover
+            {
+              z-index:555555 !important;
+            }
+            .text2_5:hover
+              {
+                z-index:555555 !important;
+              }
+      .image2:hover
+        {
+          z-index:555555 !important;
+        }
+        .image3:hover
+          {
+            z-index:555555 !important;
+          }
+          .image4:hover
+            {
+              z-index:555555 !important;
+            }
+            .image5:hover
+              {
+                z-index:555555 !important;
+              }
+              .image6:hover
+                {
+                  z-index:555555 !important;
+                }
