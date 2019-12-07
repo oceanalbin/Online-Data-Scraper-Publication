@@ -29,6 +29,8 @@
 
 body, html {
   text-decoration: none;
+  overflow-y: scroll;
+overflow-x: hidden;
 }
 
 p {
